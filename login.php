@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (password_verify($password, $user['password'])) {
             $_SESSION['username'] = $username;
-            header("Location: secure_blog_validated.php");
+            header("Location: add_posts.php");
             exit();
         } else {
             echo "<p class='message'>❌ Invalid password.</p>";
